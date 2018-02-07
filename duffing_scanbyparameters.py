@@ -13,7 +13,7 @@ if not os.path.exists('data/scanbyParam'):
 #initìial data
 y = np.zeros(2)
 y[0] = 0.
-y[1] = 1.
+y[1] = 0.001
 
 #simulation window
 t = 0.
@@ -25,8 +25,8 @@ graph = PdfPages('data/pdfgraphs.pdf')
 AC = [ 0., 0.2, 0.8, 1., 2., 10. ]
 BB = [ -10., -2., -1., 0. ]
 
-for A in ABC:
-    for C in ABC:
+for A in AC:
+    for C in AC:
         plt.clf()
         plt.title('A='+str(round(A,1))+' C='+str(round(C,1)))
         for B in BB:
