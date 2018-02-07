@@ -7,8 +7,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
 
 #touch data/ folder if npn-existent
-if not os.path.exists('data'):
-    os.makedirs('data')
+if not os.path.exists('data/scanbyParam'):
+    os.makedirs('data/scanbyParam')
 
 #initìial data
 y = np.zeros(2)
@@ -28,7 +28,7 @@ for A in np.arange(0,10):
         for C in np.arange(0,10):
             g = duffing.make_g_duffing(A,B,C)
             dat = rungekutta.rungekutta(g, y, t, dt, n)
-            filename = 'data/scanbyParam_'+str(A)+'_'+str(B)+'_'+str(C)+'.dat'
+            filename = 'data/scanbyParam/Param_'+str(A)+'_'+str(B)+'_'+str(C)+'.dat'
             print(filename)
             np.savetxt(filename, dat)
 
