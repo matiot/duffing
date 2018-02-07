@@ -13,7 +13,7 @@ t = 0.
 dt = 0.1
 n = 10
 
-
+"""
 for A in np.arange(0,10):
     for B in np.arange(0,10):
         for C in np.arange(0,10):
@@ -32,5 +32,5 @@ dat = rungekutta.rungekutta(g, y, t, dt, n)
 print(dat)
 np.savetxt('data/test.out', dat)
 
-"""
+
 

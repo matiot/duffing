@@ -70,7 +70,7 @@ def rk_reshape(data):
 		t.append(data[i][0])
 		y.append(data[i][1][0])
 		v.append(data[i][1][1])
-	return np.array([ t, y, v ])
+	return np.array([ t, y, v ]).T
 
 def rungekutta(g, y0, t0, dt, n):
 	"""Execute a complete Runge-Kutta simultation for n step
