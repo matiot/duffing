@@ -21,6 +21,8 @@ n = 100000
 
 #Simulation
 g = duffing.make_g_duffing(A,B,C)
+print( g(y,t))
+
 print('Simulating ...')
 dat = rungekutta.rk(g, y, t, dt, n)
 
